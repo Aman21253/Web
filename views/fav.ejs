@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite</title>
+</head>
+<body>
+    <h2>Fav movies</h2>
+    <% favouriteMovies.forEach(movie => { %>
+        <p>Title:<%=movie.title%></p>
+        <p>description:<%=movie.description%></p>
+        <p>Actor:<%=movie.actor%></p>
+        <p>Genre:<%=movie.genre%></p>
+        <form method="POST" action="/movie/fav/<%=movie._id.toString()%>?_method=Delete">
+            <button>Remove</button>
+        </form>
+    <% }); %>
+</body>
+</html>

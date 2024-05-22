@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+</head>
+<body>
+    <h3>Movie list</h3>
+    <%movies.forEach(movie => {%>
+        <p>Title:<%=movie.title%></p>
+        <p>description:<%=movie.description%></p>
+        <p>Actor:<%=movie.actor%></p>
+        <p>Genre:<%=movie.genre%></p>
+        <form method="post" action="/movie/fav/<%= movie._id.toString() %>?_method=put">
+            <button>Add to Favourite</button>
+        </form>
+        <hr>
+    <%});%>
+    <form action="/movie/newMovie"><button>New Movies</button></form><br>
+</body>
+</html>

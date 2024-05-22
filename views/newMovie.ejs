@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Movie</title>
+</head>
+<body>
+    <h2>New movie</h2>
+    <form action="/movie" method="post">
+        <input type="text" placeholder="Title" name="title" id="title" required>
+        <input type="text" placeholder="Description" name="description" id="description" required>
+        <input type="text" placeholder="Actor name" name="actor" id="actor" required>
+        <input type="text" placeholder="Genre" name="genre" id="genre" required>
+        <p>Genre only contain:'Action','Comedy','Drama','Fantasy','Horror','Romance','SciFi'</p>
+        <br>
+        <button>Create</button>
+    </form>
+</body>
+</html>
